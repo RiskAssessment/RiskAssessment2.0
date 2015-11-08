@@ -1,15 +1,75 @@
+<!DOCTYPE html>
+
 <html>
+
 <head>
-<meta charset="UTF-8">
-	<title>Relatório</title>
-	
-	<script src="js/jquery.min.js"></script>
-<script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.1','packages':['corechart']}]}"></script>
-<script src="js/Relatorio.js"></script>
-	
+    <title>Risk Assessment</title>
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.1','packages':['corechart']}]}"></script>
+
+    <script src="js/Relatorio.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
+
 <body>
-  <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+
+    <div id="header">
+        <div class="center">
+            <div id="logo"><a href="index.html">Risk Assessment</a>
+            </div>
+
+            <div id="menu">
+                <ul>
+                    <li><a href="index.html"><span>Início</span></a>
+                    </li>
+                    <li><a href="about.html"><span>Sobre</span></a>
+                    </li>
+                    <li><a class="active" href="cadastro.html"><span>Questionário</span></a>
+                    </li>
+                    <li><a href="contato.html"><span>Contato</span></a>
+                    </li>
+                </ul>
+            </div>
+            <!--Menu END-->
+        </div>
+    </div>
+    <div id="toprowsub">
+        <div class="center">
+            <h2>Relatorio</h2>
+        </div>
+    </div>
+
+    <div id="midrow">
+        <div class="center">
+            <div class="textbox2">
+                <br />
+                <div>
+
+                    <label>
+                        Busca por nome:
+                        <input class="field" name="nome" type="text" />
+                    </label>
+                    <label>
+                        Busca por empresa:
+                        <input class="field" name="nome" type="text" />
+                    </label>
+                    <label>
+                        Busca por email:
+                        <input class="field" name="nome" type="text" />
+                    </label>
+                    <input class="button" type="submit" value="Buscar" />
+
+
+                    <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
+
 </html>
