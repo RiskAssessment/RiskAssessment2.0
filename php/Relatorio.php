@@ -3,10 +3,10 @@ include 'conexao.php';
 
 
 
-$query = mysql_query("select empresa as Empresa, count(risco) as Pessoas from cliente where risco >30 group by empresa");
+$query = mysql_query("select empresa as Empresa, count(risco) as Pessoas from cliente where risco >50 group by empresa");
 
  $table = array();
-$table['cols'] = array(
+ $table['cols'] = array(
 	/* define your DataTable columns here
 	 * each column gets its own array
 	 * syntax of the arrays is:
