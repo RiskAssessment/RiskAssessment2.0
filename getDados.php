@@ -2,9 +2,9 @@
 include 'conexao.php';
     
     //Consultando banco de dados
-    $qryLista = mysql_query("select * FROM cliente"); 
-    while($resultado = mysql_fetch_assoc($qryLista)){
-        $vetor[] = array($resultado); 
+    $query = mysql_query("SELECT * FROM  cliente"); 
+    while($resultado = mysql_fetch_assoc($query)){
+    $vetor[] = array_map('utf8_encode', $resultado); 
     }    
     
     //Passando vetor em forma de json
