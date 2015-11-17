@@ -24,19 +24,17 @@
 				
 			}
 			
-			JavaScript
-
-$(document).ready(function(){
-	$('#tabela').empty(); //Limpando a tabela
-	$.ajax({
-		type:'post',		//Definimos o método HTTP usado
-		dataType: 'json',	//Definimos o tipo de retorno
-		url: 'Relatorio.php',//Definindo o arquivo onde serão buscados os dados
-		success: function(dados){
-			for(var i=0;dados.length>i;i++){
+			function Busca(){
+				$('#tabela').empty(); //Limpando a tabela
+             	$.ajax({
+		        type:'post',		//Definimos o método HTTP usado
+		        dataType: 'json',	//Definimos o tipo de retorno
+		        url: 'Relatorio.php',//Definindo o arquivo onde serão buscados os dados
+		         success: function(dados){
+			       for(var i=0;dados.length>i;i++){
 				//Adicionando registros retornados na tabela
 				$('#tabela').append('<tr><td>'+dados[i].nome+'</td><td>'+dados[i].empresa+'</td><td>'+dados[i].risco+'</td></tr>');
-			}
-		}
-	});
-});
+                 }
+	         	}
+          	});
+      	}
