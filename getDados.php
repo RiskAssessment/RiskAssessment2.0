@@ -2,7 +2,7 @@
 include 'conexao.php';
     
     //Consultando banco de dados
-    $qryLista = mysqli_query($con, "SELECT * FROM cliente");    
+    $qryLista = mysql_query("select * FROM cliente"); 
     while($resultado = mysqli_fetch_assoc($qryLista)){
         $vetor[] = array_map('utf8_encode', $resultado); 
     }    

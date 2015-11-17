@@ -1,13 +1,13 @@
 $(document).ready(function(){
 	$('#tabela').empty(); //Limpando a tabela
 	$.ajax({
-		type:'post',		//Definimos o método HTTP usado
+		type:'post',		//Definimos o mï¿½todo HTTP usado
 		dataType: 'json',	//Definimos o tipo de retorno
-		url: 'getdados.php',//Definindo o arquivo onde serão buscados os dados
+		url: 'getdados.php',//Definindo o arquivo onde serï¿½o buscados os dados
 		success: function(dados){
 			for(var i=0;dados.length>i;i++){
 				//Adicionando registros retornados na tabela
-				$('#tabela').append('<tr><td>'+dados[i].id+'</td><td>'+dados[i].nome+'</td><td>'+dados[i].cpf+'</td><td>'+dados[i].empresa+'</td></tr>');
+				$('#tabela').append('<tr><td>'+dados[i].id+'</td><td>'+dados[i].nome+'</td><td>'+dados[i].empresa+'</td><td>'+dados[i].risco+'</td></tr>');
 			}
 		}
 	});
