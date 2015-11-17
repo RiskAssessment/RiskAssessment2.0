@@ -3,6 +3,7 @@ include 'conexao.php';
 
 
 
+
 $query = mysql_query("select empresa as Empresa, count(risco) as Pessoas from cliente where risco >30 group by empresa");
 
  $table = array();
@@ -37,3 +38,5 @@ $table['rows'] = $rows;
 // encode the table as JSON
 $jsonTable = json_encode($table);
 echo $jsonTable;
+
+
