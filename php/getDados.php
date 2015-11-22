@@ -1,5 +1,6 @@
-<?php
+<?php 
 include 'conexao.php';
+
     
     //Consultando banco de dados
     $query = mysql_query("select * FROM cliente"); 
