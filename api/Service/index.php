@@ -1,6 +1,6 @@
 <?php
 require 'vendor/autoload.php';
-require 'php/deletar.php';
+require 'js/Service.js';
 
 $app = new \Slim\Slim();
 

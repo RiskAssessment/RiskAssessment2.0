@@ -8,7 +8,7 @@ $(document).ready(function(){
 		success: function(dados){
 			for(var i=0;dados.length>i;i++){
 				//Adicionando registros retornados na tabela
-				$('#tabela').append('<tr><td>'+dados[i].Id+'</td><td>'+dados[i].nome+'</td><td>'
+				$('#tabela').append('<tr><td>'+dados[i].nome+'</td><td>'
 				 +dados[i].cpf+'</td><td>'+dados[i].empresa+'</td><td>'+dados[i].risco+'</td> <td><p><input type="Button" value="Deletar" /></p></td></tr>');
 			}
 		}
